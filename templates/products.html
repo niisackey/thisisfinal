@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+   
+    
+    <link rel="shortcut icon" href="{{ url_for("static", filename="images/logo.png")}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/cart.css")}}">
+   
+    <title>Products</title>
+  </head>
+  <body>
+
+    
+      <video id="myVideo" controls>
+        <source src="{{ url_for("static", filename="images/vid.mp4")}}" >
+      </video>
+    
+    
+    <section class="sizes">
+      <h1>Featured Sizes</h1>
+      
+      <div class="sizesrow">
+        <section class="carousel" aria-label="Gallery">
+          <ol class="carousel__viewport">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper">
+                <a href="#carousel__slide4" class="carousel__prev"
+                  >Go to last slide</a
+                >
+                <a href="#carousel__slide2" class="carousel__next"
+                  >Go to next slide</a
+                >
+              </div>
+            </li>
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide1" class="carousel__prev"
+                >Go to previous slide</a
+              >
+              <a href="#carousel__slide3" class="carousel__next"
+                >Go to next slide</a
+              >
+            </li>
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide2" class="carousel__prev"
+                >Go to previous slide</a
+              >
+              <a href="#carousel__slide4" class="carousel__next"
+                >Go to next slide</a
+              >
+            </li>
+            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+              <div class="carousel__snapper"></div>
+              <a href="#carousel__slide3" class="carousel__prev"
+                >Go to previous slide</a
+              >
+              <a href="#carousel__slide1" class="carousel__next"
+                >Go to first slide</a
+              >
+            </li>
+          </ol>
+          <aside class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide1" class="carousel__navigation-button"
+                  >Go to slide 1</a
+                >
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide2" class="carousel__navigation-button"
+                  >Go to slide 2</a
+                >
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide3" class="carousel__navigation-button"
+                  >Go to slide 3</a
+                >
+              </li>
+              <li class="carousel__navigation-item">
+                <a href="#carousel__slide4" class="carousel__navigation-button"
+                  >Go to slide 4</a
+                >
+              </li>
+            </ol>
+          </aside>
+        </section>
+      </div>
+    </section>
+
+    <section class="flavours">
+      <h1>Flavours</h1><br><br><br>
+
+      <div class="flavoursrow">
+        <div class="flavor">
+          <div class="back">
+            <div class="pic">
+              <img src={{ url_for("static", filename="images/cocktail.png" )}} alt=""
+              class="starbucks">
+            </div>
+          </div>
+          
+          <div class="content">
+            <h3>Cocktail</h3>
+            <p>Savour the perfect blend of juice</p>
+            <h3>GHC 200</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup1"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <option value="pinegin"></option>
+        <div class="flavor1">
+          
+         <div class="back">
+          <div class="pic">
+            <img src={{ url_for("static", filename="images/pinegin.png" )}} alt=""
+            class="starbucks">
+          </div>
+         </div>
+          <div class="content">
+            <h3>Pinegin <span>bliss</span></h3>
+            <p>Blend of tropical zest and warmth</p>
+            <h3>GHC 10</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup2"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor2">
+          <div class="nocontent">
+            <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+            class="nocontent">
+          </div>
+          
+          <div class="content">
+            <h3>Citrus Wave</h3>
+            <p>A thirst-quenching concoction</p>
+            <h3>GHC 10</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup3"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor3">
+          <div class="back">
+            <div class="pic">
+              <img src={{ url_for("static", filename="images/tropi fusion.png" )}} alt=""
+              class="starbucks">
+            </div>
+          </div>
+         
+          <div class="content">
+            <h3>TropiFusion</h3>
+            <p>delivering a burst of tropical delight</p>
+            <h3>GHC 10</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup4"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor4">
+          <div class="back">
+            <div class="pic">
+              <img src={{ url_for("static", filename="images/waterpine.png" )}} alt=""
+              class="starbucks">
+            </div>
+          </div>
+          
+          <div class="content">
+            <h3>WaterPine Delight</h3>
+            <p>A Slice of paradise in a glass</p>
+            <h3>GHC 10</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup5"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor5">
+          <div class="back">
+            <div class="pic">
+              <img src={{ url_for("static", filename="images/Crimson Carrot.png" )}} alt=""
+              class="starbucks">
+            </div>
+          </div>
+          
+          <div class="content">
+            <h3>Crimson Carrot</h3>
+            <p>Harmonious blend of root vegetables</p>
+            
+            <h3>GHC 15</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup6"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor6">
+          <div class="nocontent">
+            <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+            class="nocontent">
+          </div>
+          <div class="content">
+            <h3>Banapple Burst</h3>
+            <p>A Smooth and Creamy Blend of Ffruits</p>
+            <h3>GHC 10</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup7"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+
+      <div class="flavoursrow">
+        <div class="flavor7">
+          <div class="nocontent">
+            <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+            class="starbucks">
+          </div>
+          <div class="content">
+            <h3>Beetro-Pine</h3>
+            <p>A healthy dose of nutrients and flavor.</p>
+            <h3>GHC 15</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup8"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div><br>
+
+      <div class="flavoursrow">
+        <div class="flavor8">
+          <div class="back">
+            <div class="pic">
+              <img src={{ url_for("static", filename="images/nutwave.png" )}} alt=""
+              class="starbucks">
+            </div>
+          </div>
+         
+          <div class="content">
+            <h3>Tropical Nutwave</h3>
+            <p>A true celebration of natures bounty.</p>
+            <h3>GHC 15</h3>
+          </div>
+          <div class="outliner">
+            <button class="openPopup" data-target="popup9"> <i
+             id="icon"
+             class="fas fa-plus fa-1.6x"
+             style="color: black"
+           ></i></button>
+           </div>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- Cart Button -->
+    <section id="cart" style="display: none">
+      <h1>Shopping Cart</h1>
+      <ul id="cartItems"></ul>
+      <div id="cartTotal">Total: GHC 0.00</div>
+      <br />
+      <div class="notes">
+        <label for="customerNotes">Customer Notes:</label>
+        <textarea
+          id="customerNotes"
+          rows="4"
+          cols="50"
+          placeholder="Enter any special instructions and Address for delivery"
+        ></textarea>
+      </div>
+
+      <button id="checkoutButton" onclick="checkout()">Checkout</button>
+    </section>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <div id="popup1" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <div class="header">
+          <div class="star"></div>
+          <div class="headtext">
+            <h2>Cocktail</h2>
+
+            <h2>GHC 6</h2>
+            <span>
+              <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+            </span>
+          </div>
+
+          <img src={{ url_for("static", filename="images/cocktail.png" )}} alt=""
+          class="starbucks">
+        </div>
+
+        <div class="overlay"><br>
+          <h2>About</h2><br>
+          <p>
+            Indulge in a tropical paradise with our refreshing blend of mango, pineapple, passion fruit, apple, and banana. This vibrant and exotic concoction is a burst of sunshine in a glass, combining the sweet, tropical notes of mango and pineapple with the zesty passion fruit, the crispness of apple, and the creamy richness of banana. With each sip, you'll be transported to a tranquil oasis of flavors, creating a delightful and invigorating taste experience that's perfect for any time of the day.
+          </p>
+          <br />
+          <div class="ing">
+            <!-- <div class="outline">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                        <p>Hello</p>
+                    </div> -->
+            <div class="outline">
+              <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+              <p>In 3 cute sizes</p>
+            </div>
+            <div class="outline">
+              <i
+                id="icon"
+                class="fas fa-snowflake fa-1x"
+                style="color: black"
+              ></i>
+              <p>Keep Frozen</p>
+            </div>
+            <div class="outline">
+              <i
+                id="icon"
+                class="fas fa-calendar fa-1x"
+                style="color: black"
+              ></i>
+              <p>Within 3 days</p>
+            </div>
+          </div>
+          <br />
+          <select id="size1">
+           
+            <option value=" Cocktail Medium" data-price="10">
+              Medium - GHC 10
+            </option>
+            <option value="Cocktail Large" data-price="15">
+              Large - GHC 15
+            </option></select
+          ><br />
+          <input type="number" id="quantity1" min="1" value="1" />
+          <!-- Quantity input -->
+          <button onclick="addToCart(1, 'size1', 'quantity1')">
+            Add to Cart
+          </button>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="popup2" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>PineGin Bliss</h3>
+  
+              <h3>GHC 7</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/pinegin.png" )}} alt=""
+            class="starbucks">
+          </div>
+  
+          <div class="overlay1"><br><br>
+            <h2>About</h2><br>
+            <p>
+              Indulge in a tropical paradise with our Pinegin Bliss. This refreshing elixir combines the sweet, sun-kissed essence of ripe pineapples with the invigorating warmth of ginger. Each sip is a harmonious blend of tropical zest and spicy sophistication, making it the perfect companion for a sunny day or a revitalizing pick-me-up anytime. Quench your thirst and tantalize your taste buds with this exquisite fusion of flavors.
+            </p>
+            <ol>
+              <li>small - 250ml</li>
+              
+              <li>Large - 350ml</li>
+            </ol>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size2">
+                <option value="Pinegin Small" data-price="7">Small - GHC 7</option>
+                
+                <option value=" Pinegin Large" data-price="10">Large - GHC 10</option>
+              </select><br>
+              <input type="number" id="quantity2" min="1" value="1" />
+              <!-- Quantity input -->
+              <button onclick="addToCart(2, 'size2', 'quantity2')">
+                Add to Cart
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup3" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>Citrus Wave</h3>
+  
+              <h3>GHC 7</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            
+              <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+             
+
+
+
+
+
+
+            class="starbucks">
+          </div><br>
+  
+          <div class="overlay2">
+            <h2>About</h2>
+            <p>
+              Savor the bright and juicy fusion of pineapples and oranges in our irresistible Citrus Wave. This thirst-quenching concoction captures the essence of sun-kissed fruits, delivering a burst of tropical sweetness complemented by the tangy zest of citrus. Every sip is a delightful journey to a tropical oasis, making it the perfect choice to elevate your day with a taste of paradise. Enjoy the harmonious blend of these two beloved fruits in a single glass, and let the flavors dance on your palate.
+            </p>
+            <ol>
+              <li>small - 250ml</li>
+             
+              <li>Large - 350ml</li>
+            </ol>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size3">
+              <option value="CitrusWave Small" data-price="7">
+                Small - GHC 7
+              </option>
+              
+              <option value="Citruswave Large" data-price="10">
+                Large - GHC 10
+              </option></select
+            ><br />
+            <input type="number" id="quantity3" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(3, 'size3', 'quantity3')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup4" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h2>TropiFusion</h2>
+  
+              <h2>GHC 7</h2>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/tropi fusion.png" )}} alt=""
+            class="starbucks">
+          </div>
+  
+          <div class="overlay3"><br><br>
+            <h2>About</h2>
+            <p>
+              Treat your taste buds to a tantalizing escape with our TropiFusion. This delightful concoction marries the luscious sweetness of ripe mangoes with the tropical vibrancy of pineapples, creating a symphony of flavors that's as refreshing as a summer breeze. With each sip, you'll be transported to a sun-drenched paradise, where the essence of these two fruits harmonizes perfectly, delivering a burst of tropical delight. Raise your glass to this tropical treasure and let the exotic blend of pineapple and mango brighten your day. Below are the sizes
+              <ol>
+                <li>small - 250ml</li>
+                <li>Large - 350ml</li>
+              </ol>
+            </p>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size4">
+              <option value="Tropifusion mall" data-price="7">
+                Small - GHC 7
+              </option>
+              
+              <option value="TropifusionLarge" data-price="10">
+                Large - GHC 10
+              </option></select
+            ><br />
+            <input type="number" id="quantity4" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(4, 'size4', 'quantity4')">
+                Add to Cart
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup5" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>WaterPine <span>Delight</span></h3>
+  
+              <h3>GHC 7</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/waterpine.png" )}} alt=""
+            class="starbucks">
+          </div><br>
+  
+          <div class="overlay4"><br>
+            <h2>About</h2>
+            <p>
+              Dive into a refreshing oasis with our WaterPine Delight. This invigorating blend combines the tropical sweetness of pineapples with the crisp, hydrating essence of watermelons. Every sip is a burst of summer, delivering the perfect balance of fruity indulgence and thirst-quenching satisfaction. Whether you're lounging by the pool or enjoying a sunny afternoon, this drink is a slice of paradise in a glass. Embrace the tropical synergy of pineapple and watermelon, and let the pure, natural flavors transport you to a state of pure relaxation.
+            </p>
+            <ol>
+              <li>small - 250ml</li>
+              <li>Large - 350ml</li>
+            </ol>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size5">
+              <option value="WaterPine Small" data-price="7">
+                Small - GHC 7
+              </option>
+             
+              <option value="WaterPine Large" data-price="10">
+                Large - GHC 10
+              </option></select
+            ><br />
+            <input type="number" id="quantity5" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(5, 'size5', 'quantity5')">
+                Add to Cart
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup6" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>Crimson Carrot<br>Burst</h3>
+  
+              <h3>GHC 15</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/Crimson Carrot.png" )}} alt=""
+            class="starbucks">
+          </div>
+  
+          <div class="overlay5"><br>
+            <h2>About</h2>
+            <p>
+              Experience the earthy elegance of our Crimson Carrot Burst. This vibrant fusion of nutrient-packed beetroot and sweet, vitamin-rich carrots is a celebration of wholesome goodness. With every sip, you'll encounter the harmonious blend of these root vegetables, resulting in a drink that's as invigorating as it is revitalizing. Indulge in this natural masterpiece, packed with antioxidants and flavor, and let the vibrant hues and delicious taste elevate your well-being with every refreshing gulp.
+            </p>
+            <ol>
+              
+              <li>Large - 350ml</li>
+            </ol>
+            <br>
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size6">
+             
+              <option value="Crimson Large" data-price="15">
+                Large - GHC 15
+              </option></select
+            ><br />
+            <input type="number" id="quantity6" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(6, 'size6', 'quantity6')">
+                Add to Cart
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup7" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>Banapple Burst</h3>
+  
+              <h3>GHC 7</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+            class="starbucks">
+          </div>
+  
+          <div class="overlay6">
+            <h2>About</h2>
+            <p>
+              Delight in the simple yet enchanting combination of our Banapple Burst. This smooth and creamy blend marries the sweet, buttery notes of ripe bananas with the crisp and refreshing essence of apples. Each sip is a nostalgic journey through orchards and tropical groves, offering a harmonious balance of flavors that's both comforting and invigorating. Served chilled, it's the perfect way to start your day or satisfy your sweet cravings while staying refreshingly wholesome. Raise your glass to the classic pairing of banana and apple, and let their natural charm captivate your taste buds.
+            </p>
+            <ol>
+              <li>small - 250ml</li>
+              <li>Large - 350ml</li>
+            </ol>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size7">
+              <option value="banapple Small" data-price="7">
+                Small - GHC 7
+              </option>
+              <option value=" banapple Medium" data-price="10">
+                Medium - GHC 10
+              </option>
+              </select
+            ><br />
+            <input type="number" id="quantity7" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(7, 'size7', 'quantity7')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup8" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>Beetro-Pine</h3>
+  
+              <h3>GHC 15</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/no-content.png" )}} alt=""
+            class="starbucks">
+          </div>
+  
+          <div class="overlay7">
+            <h2>About</h2>
+            <p>
+              Experience an unexpected burst of flavors with our Beetroot Pineapple Fusion. This intriguing blend combines the earthy richness of beetroot with the tropical sweetness of pineapple, resulting in a drink that's as vibrant as it is refreshing. With every sip, you'll embark on a culinary adventure that balances the bold, robust essence of beets with the sunny, tangy allure of pineapples. Enjoy the unique pairing of these ingredients in a single glass, and let the harmonious contrast awaken your palate while providing a healthy dose of nutrients and flavor.
+            </p>
+            <ol>
+              
+              <li>Large - 350ml</li>
+            </ol>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size8">
+              
+              <option value="beetropine Large" data-price="15">
+                Large - GHC 15
+              </option></select
+            ><br />
+            <input type="number" id="quantity8" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(8, 'size8', 'quantity8')">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popup9" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="header">
+            <div class="star"></div>
+            <div class="headtext">
+              <h3>Tropical Nutwave</h3>
+  
+              <h3>GHC 7</h3>
+              <span>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+                <i id="icon" class="fas fa-star fa-1x" style="color: gold"></i>
+              </span>
+            </div>
+  
+            <img src={{ url_for("static", filename="images/nutwave.png" )}} alt=""
+            class="starbucks">
+          </div>
+  <br>
+          <div class="overlay8">
+            <h2>About</h2>
+            <p>
+              Indulge in a taste of tropical paradise with our Tropical Nutwave. This exotic blend unites the nutty creaminess of tigernuts with the natural sweetness of dates and the rich, tropical essence of coconut. Each sip is a harmonious symphony of flavors, offering a delightful fusion of textures and tastes. With the earthy undertones of tigernuts, the caramel-like sweetness of dates, and the creamy coconut goodness, this drink is a true celebration of nature's bounty. Whether as a refreshing treat or a nutritious pick-me-up, it's a sip of pure delight that transports your senses to sun-drenched shores. Cheers to the enchanting trio of tigernuts, dates, and coconut!
+            </p>
+            <br />
+            <div class="ing">
+              <!-- <div class="outline">
+                          <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                          <p>Hello</p>
+                      </div> -->
+              <div class="outline">
+                <i id="icon" class="fas fa-star fa-1x" style="color: black"></i>
+                <p>In 3 cute sizes</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-snowflake fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Keep Frozen</p>
+              </div>
+              <div class="outline">
+                <i
+                  id="icon"
+                  class="fas fa-calendar fa-1x"
+                  style="color: black"
+                ></i>
+                <p>Within 3 days</p>
+              </div>
+            </div>
+            <br />
+            <select id="size9">
+              <option value="Nutwave Small" data-price="10">
+                Small - GHC 10
+              </option>
+              
+              <option value="Nutwave Large" data-price="15">
+                Large - GHC 15
+              </option></select
+            ><br />
+            <input type="number" id="quantity9" min="1" value="1" />
+            <!-- Quantity input -->
+            <button onclick="addToCart(9, 'size9', 'quantity9')">
+                Add to Cart
+              </button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="popupt-overlay">
+        <div id="popupt-content">
+          <h2>Welcome to <span> <br>Our Website !</span></h2>
+          <p>Thank you for visiting. We're excited to have you here.</p>
+          <p>
+            Updates will be rolled out on the website soon </p>
+            <h2>Notice to all customers</h2>
+            <ol>
+            <li>1. Order Should be placed a week before delivery day</li>
+            <li>2.Customers who opt for delivery should fill out their details in cutomer notes before submitting order</li>
+            <li>Payment validates order</li>
+          </ol><br>
+          <button id="close-popupt">Close</button>
+        </div>
+      </div>
+
+    <!-- <footer>
+    <div class="footerlinks">
+        <a href="{{url_for('home')}}"><img src={{ url_for("static", filename="images/home.png" )}} alt=""></a>
+        <a href="{{url_for('products_list')}}"><img src={{ url_for("static", filename="images/products.png" )}} alt=""></a>
+        
+        <div class="shopcart">
+            <img id="cartButton" src="{{ url_for("static", filename="images/cart.png" )}}" alt="Cart" onclick="toggleCart()">
+            <span id="cartItemCount">0</span>
+        </div>
+
+        <a href="{{url_for('order')}}"><img src={{ url_for("static", filename="images/more.png" )}} alt=""></a>
+    </div>
+</footer> -->
+
+
+
+    <footer>
+      <div class="footerlinks">
+        <a href="{{url_for('home')}}">
+          <i id="icon" class="fa-solid fa-house fa-2x" style="color: black"></i>
+        </a>
+        <a href="{{url_for('products_list')}}">
+          <i
+            id="icon"
+            class="fa-solid fa-wine-bottle fa-2x"
+            style="color: green"
+          ></i>
+        </a>
+
+        <div class="shopcart">
+          <a href="#cart"><img id="cartButton" src="{{ url_for("static", filename="images/cart.png" )}}" alt="Cart" onclick="toggleCart()"></a>
+          <span id="cartItemCount">0</span>
+        </div>
+        <a href="{{url_for('more')}}">
+          <i
+            id="icon"
+            class="fa-solid fa-ellipsis fa-2x"
+            style="color: black"
+          ></i>
+        </a>
+      </div>
+    </footer>
+
+    <script src="{{ url_for("static", filename="js/cartstructure.js")}}"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var popupButtons = document.getElementsByClassName("openPopup");
+        var popups = document.getElementsByClassName("popup");
+
+        // Add event listeners to all popup buttons
+        for (var i = 0; i < popupButtons.length; i++) {
+          popupButtons[i].addEventListener("click", function () {
+            var target = this.getAttribute("data-target");
+            document.getElementById(target).style.display = "block";
+          });
+        }
+
+        // Add event listeners to all close buttons within popups
+        var closeButtons = document.getElementsByClassName("close");
+        for (var j = 0; j < closeButtons.length; j++) {
+          closeButtons[j].addEventListener("click", function () {
+            this.parentNode.parentNode.style.display = "none";
+          });
+        }
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/your-kit-code.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+        // Get references to HTML elements
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
+const flavoursSection = document.querySelector(".flavours");
+
+// Function to filter and display items based on the search query
+function performSearch(query) {
+    query = query.toLowerCase();
+    const flavourItems = flavoursSection.querySelectorAll(".flavoursrow");
+
+    flavourItems.forEach(item => {
+        const flavourName = item.querySelector("h3").textContent.toLowerCase();
+        if (flavourName.includes(query)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+
+// // Event listener for the search button
+// searchButton.addEventListener("click", () => {
+//     const query = searchInput.value;
+//     performSearch(query);
+// });
+
+// // Event listener for the input field (to perform search on Enter key press)
+// searchInput.addEventListener("keyup", (event) => {
+//     if (event.key === "Enter") {
+//         const query = searchInput.value;
+//         performSearch(query);
+//     }
+// });
+
+    </script>
+
+    <script>
+      // Get the video element by its ID
+      var video = document.getElementById("myVideo");
+    
+      // Add an event listener to reset the video when it ends
+      video.addEventListener("ended", function() {
+        video.currentTime = 0;
+        video.play();
+      });
+    </script>
+
+    <script>
+      window.addEventListener('load', function() {
+    var popupOverlay = document.getElementById('popupt-overlay');
+    var closeButton = document.getElementById('close-popupt');
+
+    closeButton.addEventListener('click', function() {
+        popupOverlay.style.display = 'none';
+    });
+
+    // Set a timer to automatically close the popup after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        popupOverlay.style.display = 'none';
+    }, 30000); // 5000 milliseconds = 5 seconds
+});
+    </script>
+  </body>
+</html>

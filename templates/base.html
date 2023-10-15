@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
+
+    <section id="cart">
+        <h1>Shopping Cart</h1>
+        <ul id="cartItems">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <button id="checkoutButton" onclick="checkout()">Checkout</button>
+    </section>
+
+    <script>
+        const cart = {}; // Cart data structure (in-memory)
+
+        function addToCart(productId) {
+            if (!cart[productId]) {
+                cart[productId] = { name: `Product ${productId}`, price: 10, quantity: 1 };
+            } else {
+                cart[productId].quantity += 1;
+            }
+
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cartItems');
+            cartList.innerHTML = '';
+
+            for (const productId in cart) {
+                const product = cart[productId];
+                const listItem = document.createElement('li');
+                listItem.textContent = `${product.name} x${product.quantity} - $${product.price * product.quantity}`;
+                cartList.appendChild(listItem);
+            }
+        }
+
+        function checkout() {
+            // Assuming you have a server endpoint for order submission
+            fetch('/submit_order', {
+                method: 'POST',
+                body: JSON.stringify(cart),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Order successful, display a confirmation message
+                    alert('Order placed successfully!');
+                    // Clear the cart
+                    cart = {};
+                    updateCartDisplay();
+                } else {
+                    // Order failed, display an error message
+                    alert('Order failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while placing the order. Please try again later.');
+            });
+        }
+    </script>
+</body>
+</html>

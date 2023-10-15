@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/home.css" )}}">
+
+    <link rel="shortcut icon" href="{{ url_for("static", filename="images/logo.png")}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src={{ url_for("static", filename="images/logo.png" )}} alt="" >  
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li class="active"><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('products_list')}}">Products</a></li>
+                    <li><a href="{{url_for('more')}}">More</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="circle"></div>
+        
+       
+    
+        
+        <div class="content">
+            <div class="textbox">
+                <p>NIINAAYAA <span>VENTURES</span></p>
+                <h1>Its not just Fruit Juice its<br><span>Fruity Refresh</span></h1>
+                <div class="message">
+                    <p>Our fruit juice company is dedicated 
+                         to delivering refreshing and nutritious beverages 
+                         to consumers who value natural and healthy 
+                         choices.We are committed to sourcing the 
+                         highest quality fruits, carefully crafting <br>
+                         our juice blends, and providing an exceptional 
+                         taste experience for our customers.</p>
+                </div>
+                
+                    <br><a href="{{url_for('products_list')}}"><button> Shop Now
+                    </button></a>
+                    
+            </div><br><br><br><br><br><br><br>
+            <div class="imgbox">
+                
+                <!-- <div class="container">
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    
+                    
+                  
+                    
+                </div> -->
+                <img src={{ url_for("static", filename="images/nutwave.png" )}} alt="" class="starbucks">
+            </div>
+            
+            
+            <!-- <ul class="sci">
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/mail.png" alt=""></a></li>
+                
+            </ul> -->
+        </div>
+       
+    </section >
+
+    <!-- <section class="section1">
+        <div class="circle"></div>
+        
+       
+    
+        
+        <div class="content">
+            <div class="textbox">
+                <p>Yawas Special</p>
+                <h1>Its not just Fruit Juice its<br><span>Fruity Refresh</span></h1>
+                <div class="message">
+                    <p>Our fruit juice company is dedicated 
+                         to delivering refreshing and nutritious beverages 
+                         to consumers who value natural and healthy 
+                         choices.We are committed to sourcing the 
+                         highest quality fruits, carefully crafting 
+                         our juice blends, and providing an exceptional 
+                         taste experience for our customers.</p>
+                </div>
+                
+                    <br><a href=""><button> Shop Now
+                    </button></a><br><br><br>
+                    
+            </div>
+            <div class="imgbox1">
+                
+                <div class="container">
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    <div class="card">
+                        <img src={{ url_for("static", filename="images/img1.png" )}} alt="" class="starbucks">
+                    </div>
+                    
+                    
+                  
+                    
+                </div>
+                
+            </div>
+            
+            
+            <!-- <ul class="sci">
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/instagram.png" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/whatsapp.png" alt=""></a></li>
+                <li><a href="#"><img src="./assets/images/img1.pngs/images/mail.png" alt=""></a></li>
+                
+            </ul> -->
+        
+       
+    
+
+
+
+    <footer>
+        <div class="footerlinks">
+          
+            <a href="{{url_for('home')}}">
+                <i id="icon" class="fa-solid fa-house fa-2x" style="color: green;"></i>
+            </a>
+            <a href="{{url_for('products_list')}}">
+                <i id="icon" class="fa-solid fa-wine-bottle fa-2x" style="color: black;"></i>
+            </a>
+            <a href="{{url_for('more')}}">
+                <i id="icon" class="fa-solid fa-ellipsis fa-2x" style="color: black;"></i>
+            </a>
+        
+            
+        </div>
+        
+    </footer>
+
+  
+    
+
+
+   
+    
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+             
+        }
+   	function changeCircleColor(color){
+			const circle = document.querySelector(".circle");
+			circle.style.background = color;
+        
+		}
+      </script> 
+
+<script
+src="https://kit.fontawesome.com/your-kit-code.js"
+crossorigin="anonymous"
+></script>
+
+    
+</body>
+</html>
+<!-- <img src={{ url_for("static", filename="images/Big Data.png" )}} alt=""> -->
